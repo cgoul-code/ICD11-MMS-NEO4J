@@ -4,19 +4,6 @@
 #https://neo4j.com/docs/api/python-driver/current/ (hvordan sette opp neo4j database)
 #https://icdcdn.who.int/icd11referenceguide/en/html/index.html
 
-#for ICD-11:
-#ClientId: 487eb68b-fb2b-4ac3-83a5-58a32c7b7e45_0eed45fa-c7a3-4c14-828c-c52c5bde59d6
-#ClientSecret: xHrU0eIqGl3VssuOT6ewQpo5hhqqj7zfNqsPyYW0qbY=
-
-# user
-# temant: 6a2828dc-c732-46e9-9832-de22f72116ee
-# Wait 60 seconds before connecting using these details, or login to https://console.neo4j.io to validate the Aura Instance is available
-# NEO4J_URI=neo4j+s://49806a05.databases.neo4j.io
-# NEO4J_USERNAME=neo4j
-# NEO4J_PASSWORD=fr0detSnPFYJ5XVlSZy5uRMiZUPdJDpG5Ny5Iyvgsso
-# NEO4J_PASSWORD=14141414
-# AURA_INSTANCEID=49806a05
-# AURA_INSTANCENAME=ICD11_MMS
 
 import requests
 import json
@@ -33,7 +20,6 @@ urllib3.disable_warnings()
 
 # Set up the Neo4j driver
 driver = GraphDatabase.driver(uri="bolt://localhost:7687", auth=("neo4j", "14141414"))
-#driver = GraphDatabase.driver(uri="neo4j+s://49806a05.databases.neo4j.io", auth=("neo4j", "14141414"))
 
 # Clean the graph database, if using with pre-existing data
 with driver.session() as session:
